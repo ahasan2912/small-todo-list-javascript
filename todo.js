@@ -20,7 +20,9 @@ const doneBtn = document.getElementById('add-task').addEventListener('click', fu
         const addItem = document.getElementById('add-item');
         const ul = document.createElement('ul');
         const hr = document.createElement('hr');
-        ul.classList.add('grid-col');
+        ul.classList.add('grid');
+        ul.classList.add('grid-cols-3');
+        ul.classList.add('my-2');
         ul.setAttribute('id','ul-tag')
         ul.innerHTML = `<li>${x++}</li>
                         <li>${inputValue}</li>
@@ -42,11 +44,15 @@ document.getElementById('input-field').addEventListener("keyup", function (event
         else {
             const addItem = document.getElementById('add-item');
             const ul = document.createElement('ul');
-            ul.classList.add('grid-col')
+            const hr = document.createElement('hr');
+            ul.classList.add('grid');
+            ul.classList.add('grid-cols-3');
+            ul.classList.add('my-2');
             ul.innerHTML = `<li>${x++}</li>
                         <li>${inputValue}</li>
                         <li><button onclick = "deleteTr(this)" class="bg-yellow-500 text-white p-2 border-2 border-green-500 rounded-md">Done</button></li>`;
             addItem.appendChild(ul);
+            addItem.appendChild(hr);
             inputFiled.value = '';
         }
     }
