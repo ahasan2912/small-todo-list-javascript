@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="ml-28 mt-3">
+        <button id="theme1" class="bg-slate-100 px-4 py-2 rounded-md m-2 text-black font-semibold">Light</button>
+        <button id="theme2" class="bg-slate-100 px-4 py-2 rounded-md m-2 text-black font-semibold">Dark</button>
+    </div>
+    <h1 class="text-center mt-5 text-5xl font-extrabold">To Do List<span>&#128400;&#128218;</span></h1>
+    <div class="flex flex-col justify-center items-center mt-10">
+        <div class="flex gap-10 w-4/5">
+            <input id="input-field" class="bg-gray-300 text-black  p-4 rounded-md outline-none border-2 border-green-500 w-[80%]" type="text"
+                placeholder="Type here">
+            <button id="add-task" class="bg-gray-300 p-4 rounded-md border-2 border-green-500 w-[20%]">Add Task</button>
+        </div>
+        <div id="parent-div" class="w-4/5">
+            <ul class="grid-col">
+                <li>Number</li>
+                <li>Description</li>
+                <li>Action</li>
+            </ul>
+            <hr>
+            <div id="add-item">
+                <!-- <ul class="grid-col my-3">
+                    <li>1</li>
+                    <li>Go to market</li>
+                    <li><button class="bg-gray-300 p-2 border-2 border-green-500 rounded-md">Done</button></li>
+                </ul> -->
+                <hr>
+            </div>
+        </div>
+    </div>
+    <div class="text-right mr-32"><button id="clear-all" class="mt-5 bg-gray-300 px-4 py-2 rounded-md">Clear All</button></div>
+    <script src="./todo.js"></script>
+</body>
+
+</html>
